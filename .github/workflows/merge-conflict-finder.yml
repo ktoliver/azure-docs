@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with Actions
+
+- name: Merge Conflict Finder
+  # You may pin to the exact commit or the version.
+  # uses: olivernybroe/action-conflict-finder@07f8b2c6e3b6cd953a2335892cfc4f253221025e
+  uses: olivernybroe/action-conflict-finder@v1.2
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on: [push]
+
+jobs:
+  merge_conflict_job:
+    runs-on: ubuntu-latest
+    name: Find merge conflicts
+    steps:
+      # Checkout the source code so we have some files to look at.
+      - uses: actions/checkout@v2
+      # Run the actual merge conflict finder
+      - name: Merge Conflict finder
+        uses: olivernybroe/action-conflict-finder@v1.2
