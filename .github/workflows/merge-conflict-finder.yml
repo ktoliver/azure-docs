@@ -1,5 +1,5 @@
 - name: Merge Conflict Finder
-  uses: olivernybroe/action-conflict-finder@v1.2
+    uses: olivernybroe/action-conflict-finder@v1.2
 on: [push]
 jobs:
   merge_conflict_job:
